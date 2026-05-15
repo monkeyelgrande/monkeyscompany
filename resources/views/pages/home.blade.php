@@ -104,7 +104,7 @@
                 <h3 class="font-headline-md text-headline-md mb-4">Soporte Técnico</h3>
                 <p class="text-white/70 mb-8">Mantenimiento preventivo y correctivo de computadores, impresoras y redes. Recuperación de datos y optimización de sistemas críticos.</p>
                 <div class="mt-auto space-y-4 relative z-10">
-                    @foreach(['Respuesta inmediata','Servicio a domicilio','Diagnóstico gratuito'] as $feat)
+                    @foreach(['Respuesta inmediata','Servicio a domicilio','Diagnóstico el mismo dia'] as $feat)
                         <div class="flex items-center gap-3">
                             <span class="material-symbols-outlined text-[#00D3FF]" style="font-size: 20px">check_circle</span>
                             <span class="font-label-bold text-label-bold uppercase">{{ $feat }}</span>
