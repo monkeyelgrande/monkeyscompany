@@ -1,0 +1,35 @@
+# Proyecto Web — Monkeys Company SAS
+
+## Información de la Empresa
+- **Nombre:** Monkeys Company SAS (antes Monkeys Technology)
+- **Dirección:** Carrera 12 N 10-15, Santa Rosa del Sur, Bolívar, Colombia
+- **Teléfono/WhatsApp:** (57) 313 873 4449
+- **Correos:**
+  - gerencia@monkeyscompany.com
+  - facturacion@monkeyscompany.com
+  - no-reply@monkeyscompany.com
+- **Redes sociales:** Facebook, Instagram, YouTube, Twitter/X
+- **Años de experiencia:** Más de 15 años
+
+## Servicios
+1. **Venta de equipos y accesorios** — Computadores, impresoras, UPS, periféricos
+2. **Soporte técnico y reparación** — Computadores, impresoras, redes
+3. **Desarrollo web y software** — Sitios web, aplicaciones de escritorio en Java
+4. **Insumos y suministros** — Tintas, repuestos, cables, herramientas
+
+## Identidad de Marca
+- **Tipografía:** Bebas Neue
+- **Colores:**
+  - Principal: #00002A (Azul muy oscuro)
+  - Secundarios: #1E2A4C, #5A9DBC, #71CAFF
+  - Acentos: #00D3FF (Cyan), #FFFF00 (Amarillo), #FF8C00 (Naranja)
+  - Fondo/Base: #FFFFFF (Blanco), #C8E7FA (Azul pálido)
+
+## Estructura MVP
+1. **Inicio:** Hero, servicios destacados, estadísticas, CTA WhatsApp.
+2. **Servicios:** Detalle con iconos.
+3. **Nosotros:** Historia, misión, visión, valores.
+4. **Contacto:** Formulario, mapa, redes.
+
+## Inspiración
+- https://stripe.com/es-us (Estilo moderno, gradientes, tipografía limpia, secciones amplias)

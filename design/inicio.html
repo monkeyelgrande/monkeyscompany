@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Monkeys Company SAS | Impulsando tu tecnología</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "accent-orange": "#FF8C00",
+                      "outline": "#77767f",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#46464e",
+                      "on-secondary-fixed": "#001e2d",
+                      "on-tertiary-container": "#0090af",
+                      "tertiary-fixed": "#b5ebff",
+                      "surface-container-low": "#f2f3ff",
+                      "on-tertiary-fixed-variant": "#004e5f",
+                      "on-surface": "#0d1a3b",
+                      "surface-container-highest": "#dbe1ff",
+                      "error": "#ba1a1a",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#14173f",
+                      "success-green": "#70E000",
+                      "surface-dim": "#cfd9ff",
+                      "secondary-fixed-dim": "#82cfff",
+                      "secondary": "#00658d",
+                      "on-error-container": "#93000a",
+                      "surface": "#faf8ff",
+                      "inverse-surface": "#232f51",
+                      "surface-container-high": "#e3e7ff",
+                      "primary": "#000000",
+                      "on-background": "#0d1a3b",
+                      "stripe-indigo": "#635BFF",
+                      "tertiary-fixed-dim": "#42d6ff",
+                      "surface-container": "#eaedff",
+                      "bg-pale": "#C8E7FA",
+                      "primary-container": "#14173f",
+                      "on-primary-container": "#7e80ae",
+                      "on-secondary-container": "#005577",
+                      "tertiary-container": "#001f28",
+                      "secondary-container": "#72caff",
+                      "on-secondary-fixed-variant": "#004c6b",
+                      "background": "#faf8ff",
+                      "tertiary": "#000000",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "primary-fixed-dim": "#c1c3f5",
+                      "surface-tint": "#585b86",
+                      "secondary-fixed": "#c6e7ff",
+                      "on-primary-fixed-variant": "#40436d",
+                      "error-container": "#ffdad6",
+                      "outline-variant": "#c7c5cf",
+                      "accent-yellow": "#FFFF00",
+                      "surface-variant": "#dbe1ff",
+                      "inverse-primary": "#c1c3f5",
+                      "inverse-on-surface": "#eef0ff",
+                      "surface-bright": "#faf8ff",
+                      "primary-fixed": "#e0e0ff",
+                      "on-tertiary-fixed": "#001f28"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "container-max": "1280px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "section-padding": "120px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Bebas Neue"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-xl": ["Bebas Neue"],
+                      "headline-md": ["Bebas Neue"],
+                      "headline-xl-mobile": ["Bebas Neue"],
+                      "label-bold": ["Inter"],
+                      "headline-sm": ["Bebas Neue"],
+                      "body-sm": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg": ["48px", {"lineHeight": "48px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-xl": ["80px", {"lineHeight": "80px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "700"}],
+                      "headline-xl-mobile": ["48px", {"lineHeight": "48px", "fontWeight": "700"}],
+                      "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "28px", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .mesh-gradient-hero {
+            background-color: #00002A;
+            background-image: 
+                radial-gradient(at 0% 0%, #00D3FF 0, transparent 50%),
+                radial-gradient(at 100% 100%, #00002A 0, transparent 50%),
+                radial-gradient(at 100% 0%, #00D3FF 0, transparent 40%);
+        }
+        .stripe-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid #C8E7FA;
+        }
+        .ambient-shadow {
+            box-shadow: 0 15px 35px rgba(0, 0, 42, 0.05), 0 5px 15px rgba(0, 0, 0, 0.03);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-xl border-b border-outline-variant/20 dark:border-outline/20 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md tracking-tight text-primary dark:text-primary-fixed"><img alt="Monkeys Company SAS" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5zC-tK9vSFY4nYOL8plQWA2haskqX6Pivd958I1xpLNlV1F9wm4AVSEWxZeCj9Az4ntincylOZHqwFlOVLN-pG48OaKRsSLbu9LlvhWbBTb6HU0UcU36qQl4eNMLuWxymj7uSEWV6t2DzJeg3ttHGAa8UhM6CudSJgo0ngdr1FTyUSA06EiyXd8fxcm5mR5-TmE_Qe7MmVREtFZ0NhSaihs-PAroGyRIw1RKKd_JHAVqP6V2CtxjSk6w6gdHkWdJnjuyoEb63AiY"/></div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary dark:border-secondary-fixed-dim pb-1 font-label-bold text-label-bold" href="#">Inicio</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-bold text-label-bold" href="#">Servicios</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-bold text-label-bold" href="#">Nosotros</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-bold text-label-bold" href="#">Contacto</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-bold text-label-bold hover:opacity-80 transition-opacity active:scale-95 duration-200">¿Listo para empezar?</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative mesh-gradient-hero stripe-slant pt-24 pb-48 px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="inline-block bg-white/10 text-tertiary-fixed-dim font-label-bold text-label-bold py-2 px-4 rounded-full border border-white/20 mb-6 uppercase tracking-widest">Tecnología de Vanguardia</span>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-white mb-8 leading-tight">
+                    Impulsando tu tecnología por más de 15 años
+                </h1>
+<p class="font-body-lg text-body-lg text-white/80 mb-10 max-w-xl">
+                    Soluciones integrales en soporte técnico, desarrollo de software y venta de equipos de alto rendimiento. Transformamos la complejidad técnica en ventaja competitiva.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-[#00D3FF] text-primary font-label-bold text-label-bold px-10 py-5 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-opacity active:scale-95 duration-200 shadow-xl shadow-cyan-500/20" href="https://wa.me/573138734449">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                        Hablar con un experto
+                    </a>
+<a class="border border-white/30 text-white font-label-bold text-label-bold px-10 py-5 rounded-xl flex items-center justify-center hover:bg-white/10 transition-colors" href="#servicios">
+                        Explorar Servicios
+                    </a>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-cyan-400/20 blur-[100px] rounded-full"></div>
+<img alt="Empresa de Tecnología" class="rounded-3xl shadow-2xl border border-white/10 transform rotate-3 hover:rotate-0 transition-transform duration-700" data-alt="A high-tech server room with glowing blue LED indicator lights and neatly organized networking cables, representing enterprise-grade infrastructure. The lighting is cold and professional with cyan accents, matching the brand's aesthetic of innovation and technical precision. Shallow depth of field creates a sense of sophistication and high-end engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNJfZfKFETYeOr3Bl-ujo-M6PFCSMSU-rbNfsHSrrauCqF4A9F3yw0o38q6KX2yW_UNQOcYDyR13RZujSvif1NKEihVz3n8rLxGnoIGy6Cys1hLMy_LiSuVyRm--kPpC0gIoQb4iMgv9ALQoos00ORv6xtb7dFriC8k_TT-tg-_-wcMjbW3x9HTuK-hGocc8nvYM_o1jHxHh7LKX_rYCTkMqVC47f6bkMORUn-72hSW48UDHlIeDNoswB0lxVC8kiWhLxRPJ9crgc"/>
+</div>
+</div>
+</header>
+<!-- Stats Section -->
+<section class="relative -mt-24 px-margin-mobile md:px-margin-desktop z-20">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="glass-card p-10 rounded-3xl ambient-shadow flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-4" data-icon="home_repair_service">home_repair_service</span>
+<div class="font-headline-lg text-headline-lg text-primary">5,000+</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Equipos reparados</div>
+</div>
+<div class="glass-card p-10 rounded-3xl ambient-shadow flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-4" data-icon="web">web</span>
+<div class="font-headline-lg text-headline-lg text-primary">250+</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Sitios Web creados</div>
+</div>
+<div class="glass-card p-10 rounded-3xl ambient-shadow flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-4" data-icon="developer_mode">developer_mode</span>
+<div class="font-headline-lg text-headline-lg text-primary">80+</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Aplicaciones desarrolladas</div>
+</div>
+</div>
+</section>
+<!-- Featured Services Section (Bento Grid) -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="servicios">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg mb-4">Nuestros Servicios Especializados</h2>
+<div class="h-1.5 w-24 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 grid-rows-2 gap-8 h-auto md:h-[800px]">
+<!-- Equipment Sales -->
+<div class="md:col-span-8 md:row-span-1 group relative overflow-hidden rounded-3xl border border-bg-pale bg-white flex flex-col md:flex-row items-center ambient-shadow hover:-translate-y-2 transition-transform duration-300">
+<div class="p-10 md:w-1/2">
+<span class="text-secondary font-label-bold text-label-bold block mb-4">RETAIL TECH</span>
+<h3 class="font-headline-md text-headline-md mb-4">Venta de Equipos</h3>
+<p class="text-on-surface-variant mb-6">Hardware de alto rendimiento para gaming, diseño y estaciones de trabajo profesionales. Marcas líderes con garantía oficial.</p>
+<a class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Ver catálogo <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+<div class="h-64 md:h-full md:w-1/2 w-full overflow-hidden">
+<img alt="Venta de equipos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Modern high-end laptop with professional aesthetics resting on a clean white desk next to sleek accessories. The scene is brightly lit with natural light-mode tones and soft blue accents, emphasizing the premium quality and powerful hardware of the technology equipment sold by Monkeys Company SAS." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQj2-0iOmbyWMf-W6iCiLTJ6ry38pK1CkALzwxm1VvI3fsDt4Cwekd9DHCwVcrL2rLeTvbj9mIldksf5fseLl8YEv3mX1Qt_8K8mdHSWzrBQq8gY3r_ivNNOVQb8OmeYezKB2szv233ysvhieC6-ugNHkJPTiRh7FsAGsfa4AhTNOsh4Si4psdI3f4jknnv9pb8VGdbM27fsE77hxVER_eyoPfnbrDKh9TKHY9WVPAAXIuWTo2gtzAt3zO62pXKljopenwoiA1SBM"/>
+</div>
+</div>
+<!-- Tech Support -->
+<div class="md:col-span-4 md:row-span-2 group relative overflow-hidden rounded-3xl border border-bg-pale bg-primary text-white ambient-shadow hover:-translate-y-2 transition-transform duration-300">
+<div class="p-10 h-full flex flex-col">
+<div class="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="build">build</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Soporte Técnico</h3>
+<p class="text-white/70 mb-8">Mantenimiento preventivo y correctivo. Recuperación de datos y optimización de sistemas críticos con respuesta inmediata.</p>
+<div class="mt-auto space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#00D3FF]" data-icon="check_circle">check_circle</span>
+<span class="font-label-bold">Respuesta en 24h</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#00D3FF]" data-icon="check_circle">check_circle</span>
+<span class="font-label-bold">Certificación ISO</span>
+</div>
+</div>
+<div class="absolute -right-20 -bottom-20 opacity-10">
+<span class="material-symbols-outlined text-[300px]" data-icon="settings">settings</span>
+</div>
+</div>
+</div>
+<!-- Web Development -->
+<div class="md:col-span-8 md:row-span-1 group relative overflow-hidden rounded-3xl border border-bg-pale bg-white flex flex-col md:flex-row-reverse items-center ambient-shadow hover:-translate-y-2 transition-transform duration-300">
+<div class="p-10 md:w-1/2">
+<span class="text-secondary font-label-bold text-label-bold block mb-4">SOFTWARE SOLUTIONS</span>
+<h3 class="font-headline-md text-headline-md mb-4">Desarrollo Web &amp; Apps</h3>
+<p class="text-on-surface-variant mb-6">Creamos experiencias digitales escalables, desde landing pages hasta plataformas de e-commerce y aplicaciones móviles nativas.</p>
+<a class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Ver portafolio <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+<div class="h-64 md:h-full md:w-1/2 w-full overflow-hidden">
+<img alt="Desarrollo Web" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Close-up of a high-resolution monitor displaying complex, clean computer code with syntax highlighting in vibrant cyan and white. A modern, minimalist workspace in the background with soft lighting creates a high-tech atmosphere, representing professional web and app development services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOCXjaLQXXqLgxDlQiYKVmJfwS4-WlTlUSYRUTwS2WQpyh_mkOYhHKRznpW7e-D6OxDPTkc9jH_MYFDrV5RdkSF-rUrtqBEB25FR1L3sENtoRgr0y9GaE7_0g_l9GR3_dlt-WBjTwbHEH7lS2UHfvH5eetyBjHXPPOWMN6FP7aLFfACSJiLLMy2wZIZFmnmpumGbPFjv0Ny0w9yoUCLSHx0H3fb2do-tbiZfesiaJXncocf0xpzPwfxDsGhilh2gXt0i8_lfa_j8I"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Large CTA Section -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-low overflow-hidden relative">
+<div class="absolute inset-0 bg-primary opacity-[0.02] -skew-y-3 transform origin-right"></div>
+<div class="max-w-container-max mx-auto text-center relative z-10">
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6">¿Tu negocio está listo para el siguiente nivel?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                No dejes que los problemas técnicos detengan tu crecimiento. Agenda una consultoría gratuita con nuestros especialistas hoy mismo.
+            </p>
+<div class="flex justify-center">
+<a class="bg-primary text-on-primary font-headline-md text-headline-md px-12 py-6 rounded-2xl hover:bg-secondary transition-all active:scale-95 shadow-2xl flex items-center gap-4" href="https://wa.me/573138734449">
+                    Contáctanos ahora
+                    <span class="material-symbols-outlined" data-icon="send">send</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-surface-container-lowest w-full py-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md text-on-primary dark:text-primary mb-6"><img alt="Monkeys Company SAS" class="h-12 w-auto mb-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5zC-tK9vSFY4nYOL8plQWA2haskqX6Pivd958I1xpLNlV1F9wm4AVSEWxZeCj9Az4ntincylOZHqwFlOVLN-pG48OaKRsSLbu9LlvhWbBTb6HU0UcU36qQl4eNMLuWxymj7uSEWV6t2DzJeg3ttHGAa8UhM6CudSJgo0ngdr1FTyUSA06EiyXd8fxcm5mR5-TmE_Qe7MmVREtFZ0NhSaihs-PAroGyRIw1RKKd_JHAVqP6V2CtxjSk6w6gdHkWdJnjuyoEb63AiY"/></div>
+<p class="text-on-primary/70 dark:text-on-surface-variant/70 font-body-sm text-body-sm mb-8">
+                    Líderes en soluciones tecnológicas en el Sur de Bolívar. Innovación y calidad al servicio de tu empresa.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-on-primary/20 flex items-center justify-center text-on-primary hover:bg-accent-orange transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="facebook">Notebook</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-primary/20 flex items-center justify-center text-on-primary hover:bg-accent-orange transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="camera">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-primary/20 flex items-center justify-center text-on-primary hover:bg-accent-orange transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-primary mb-8 uppercase tracking-widest">Navegación</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary transition-all flex items-center gap-2 hover:translate-x-1" href="#">Inicio</a></li>
+<li><a class="text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary transition-all flex items-center gap-2 hover:translate-x-1" href="#">Servicios</a></li>
+<li><a class="text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary transition-all flex items-center gap-2 hover:translate-x-1" href="#">Nosotros</a></li>
+<li><a class="text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary transition-all flex items-center gap-2 hover:translate-x-1" href="#">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-primary mb-8 uppercase tracking-widest">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary transition-all flex items-center gap-2 hover:translate-x-1" href="#">Privacidad</a></li>
+<li><a class="text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary transition-all flex items-center gap-2 hover:translate-x-1" href="#">Términos</a></li>
+<li><a class="text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary transition-all flex items-center gap-2 hover:translate-x-1" href="#">Cookies</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-primary mb-8 uppercase tracking-widest">Contacto</h4>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#00D3FF]" data-icon="location_on">location_on</span>
+<span class="text-on-primary/70 font-body-sm text-body-sm">Carrera 12 N 10-15, Santa Rosa del Sur.</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#00D3FF]" data-icon="phone">phone</span>
+<span class="text-on-primary/70 font-body-sm text-body-sm">(57) 313 873 4449</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#00D3FF]" data-icon="mail">mail</span>
+<span class="text-on-primary/70 font-body-sm text-body-sm">info@monkeyscompany.com</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-on-primary/10 mt-section-padding pt-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<p class="text-on-primary/50 font-label-bold text-label-bold">© 2024 Monkeys Company SAS. Carrera 12 N 10-15, Santa Rosa del Sur. Phone: (57) 313 873 4449</p>
+</div>
+</footer>
+</body></html>

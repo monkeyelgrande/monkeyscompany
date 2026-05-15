@@ -18,6 +18,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Contact form destination
+    |--------------------------------------------------------------------------
+    |
+    | Email address that receives messages submitted from the public
+    | contact form (ContactController). Set via MAIL_TO_CONTACT in .env.
+    */
+
+    'contact_address' => env('MAIL_TO_CONTACT', 'gerencia@monkeyscompany.com'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Mailer Configurations
     |--------------------------------------------------------------------------
     |

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .mesh-gradient-bg {
+            background-color: #faf8ff;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(200, 231, 250, 0.4) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(114, 202, 255, 0.2) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(255, 140, 0, 0.05) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(0, 211, 255, 0.1) 0px, transparent 50%);
+        }
+        .slant-container {
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "accent-orange": "#FF8C00",
+                        "outline": "#77767f",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#46464e",
+                        "on-secondary-fixed": "#001e2d",
+                        "on-tertiary-container": "#0090af",
+                        "tertiary-fixed": "#b5ebff",
+                        "surface-container-low": "#f2f3ff",
+                        "on-tertiary-fixed-variant": "#004e5f",
+                        "on-surface": "#0d1a3b",
+                        "surface-container-highest": "#dbe1ff",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#14173f",
+                        "success-green": "#70E000",
+                        "surface-dim": "#cfd9ff",
+                        "secondary-fixed-dim": "#82cfff",
+                        "secondary": "#00658d",
+                        "on-error-container": "#93000a",
+                        "surface": "#faf8ff",
+                        "inverse-surface": "#232f51",
+                        "surface-container-high": "#e3e7ff",
+                        "primary": "#000000",
+                        "on-background": "#0d1a3b",
+                        "stripe-indigo": "#635BFF",
+                        "tertiary-fixed-dim": "#42d6ff",
+                        "surface-container": "#eaedff",
+                        "bg-pale": "#C8E7FA",
+                        "primary-container": "#14173f",
+                        "on-primary-container": "#7e80ae",
+                        "on-secondary-container": "#005577",
+                        "tertiary-container": "#001f28",
+                        "secondary-container": "#72caff",
+                        "on-secondary-fixed-variant": "#004c6b",
+                        "background": "#faf8ff",
+                        "tertiary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#c1c3f5",
+                        "surface-tint": "#585b86",
+                        "secondary-fixed": "#c6e7ff",
+                        "on-primary-fixed-variant": "#40436d",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c7c5cf",
+                        "accent-yellow": "#FFFF00",
+                        "surface-variant": "#dbe1ff",
+                        "inverse-primary": "#c1c3f5",
+                        "inverse-on-surface": "#eef0ff",
+                        "surface-bright": "#faf8ff",
+                        "primary-fixed": "#e0e0ff",
+                        "on-tertiary-fixed": "#001f28"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "section-padding": "120px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Bebas Neue"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Bebas Neue"],
+                        "headline-md": ["Bebas Neue"],
+                        "headline-xl-mobile": ["Bebas Neue"],
+                        "label-bold": ["Inter"],
+                        "headline-sm": ["Bebas Neue"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "48px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl": ["80px", {"lineHeight": "80px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "headline-xl-mobile": ["48px", {"lineHeight": "48px", "fontWeight": "700"}],
+                        "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "28px", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background font-body-md text-on-surface">
+<!-- Top Navigation Shell -->
+<header class="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm">
+<nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md tracking-tight text-primary"><img alt="Monkeys Company SAS Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5zC-tK9vSFY4nYOL8plQWA2haskqX6Pivd958I1xpLNlV1F9wm4AVSEWxZeCj9Az4ntincylOZHqwFlOVLN-pG48OaKRsSLbu9LlvhWbBTb6HU0UcU36qQl4eNMLuWxymj7uSEWV6t2DzJeg3ttHGAa8UhM6CudSJgo0ngdr1FTyUSA06EiyXd8fxcm5mR5-TmE_Qe7MmVREtFZ0NhSaihs-PAroGyRIw1RKKd_JHAVqP6V2CtxjSk6w6gdHkWdJnjuyoEb63AiY"/></div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold" href="#">Inicio</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-bold text-label-bold" href="#">Servicios</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold" href="#">Nosotros</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold" href="#">Contacto</a>
+</div>
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-label-bold text-label-bold hover:opacity-80 transition-opacity active:scale-95">¿Listo para empezar?</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative py-section-padding px-margin-mobile md:px-margin-desktop overflow-hidden mesh-gradient-bg">
+<div class="max-w-container-max mx-auto relative z-10">
+<div class="max-w-3xl">
+<span class="inline-block bg-bg-pale text-primary px-4 py-2 rounded-full font-label-bold text-label-bold mb-6">NUESTRO PORTAFOLIO</span>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-8 leading-tight">SOLUCIONES TECNOLÓGICAS SIN FRONTERAS</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Impulsamos tu visión digital con infraestructura robusta, software a medida y soporte técnico de élite. Ingeniería de precisión para el mercado global.
+                    </p>
+</div>
+</div>
+<!-- Abstract circuit element -->
+<div class="absolute right-0 top-0 w-1/3 h-full opacity-20 pointer-events-none hidden md:block">
+<svg class="w-full h-full text-secondary" fill="none" viewbox="0 0 400 800" xmlns="http://www.w3.org/2000/svg">
+<path d="M400 100H200V200H0M400 400H300V600H100V800" stroke="currentColor" stroke-width="2"></path>
+<circle cx="200" cy="200" fill="currentColor" r="10"></circle>
+<circle cx="300" cy="400" fill="currentColor" r="10"></circle>
+<circle cx="100" cy="600" fill="#00D3FF" r="10"></circle>
+</svg>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-white">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Service 1: Venta de Equipos (Large Feature) -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-[24px] bg-primary border border-outline-variant/10 shadow-2xl min-h-[500px]">
+<div class="absolute inset-0 opacity-40 group-hover:scale-105 transition-transform duration-700">
+<img class="w-full h-full object-cover" data-alt="A premium collection of high-end tech hardware including sleek laptops, professional laser printers, and industrial UPS units arranged on a minimalist white desk. The lighting is crisp and cool-toned, emphasizing metallic textures and clean lines. The atmosphere is professional and sophisticated, using a high-tech corporate aesthetic with subtle blue light highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr16cRXhRxhHbTRsPjkgT8u-4olGOLsHA-5lk7AmypHgrGkm4M9JvOH5xOvyiBJjLXp9Y0bYREtTd23YIFitIf8ZHixZOpfZ0lKudwszzIbhPnd9hsO7IQ_hqf6ELXmu-yQVNfjC4FdKNCdJh0yAFltkOIct_4tIyJljd3MeJjcA98MGGyOkJVQQi6C1JAO6cZrPfM_y_XNZGKhB_Y115anTIzPV1sm5DkdNgZ6GMfK22tpwXSbKFp6WAu2Tpytyakv3jb9_B8PXU"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-10 md:p-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="devices">devices</span>
+<div class="h-[1px] w-12 bg-accent-orange"></div>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">VENTA DE EQUIPOS Y ACCESORIOS</h2>
+<p class="font-body-md text-body-md text-white/80 max-w-xl mb-8">
+                                Equipamiento de alto rendimiento: Computadores, impresoras, UPS y periféricos de última generación para potenciar tu productividad.
+                            </p>
+<button class="inline-flex items-center text-accent-yellow font-label-bold text-label-bold hover:gap-2 transition-all">EXPLORAR CATÁLOGO <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span></button>
+</div>
+</div>
+<!-- Service 2: Soporte Técnico -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-[24px] bg-surface-container border border-outline-variant/30 hover:border-secondary transition-colors">
+<div class="h-1/2 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A technician in a high-tech lab working on a complex network router with glowing blue LED indicators and neatly organized ethernet cables. The scene is illuminated with a focused task light, creating a professional and technical mood. The background features blurred silhouettes of server racks in a clean, modern data center environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV8_EgUewpetiyRoTEQGgqaOkNturg3OdqdcDxQqOk17HKajKq6lVRUdnXRCVQUy8q-sRXc5o6fOZwqjfqMfGC4wlCdvWkGkzmhzq2k9zwRnvgdq_e5Haf8NsyJSDd9Lrvtp-ptqoOyFMStOGNOAt-iXjj-rt2qtlEeDzuhNPMlXPc3hxBMuI1BaGDxbxFiecTUWK1y5kZQ7-IWkpanh2Q9rXwTz_har907X8-NucmxT4exgtYxKGGdrlXQiZsb4RSkTtYO-wONX8"/>
+</div>
+<div class="p-8">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4" data-icon="build">build</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-3">SOPORTE Y REPARACIÓN</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+                                Mantenimiento preventivo y correctivo de redes y hardware con estándares internacionales.
+                            </p>
+<div class="flex space-x-2">
+<span class="px-3 py-1 bg-white border border-outline-variant/50 rounded-full text-[10px] font-label-bold text-primary">REDES</span>
+<span class="px-3 py-1 bg-white border border-outline-variant/50 rounded-full text-[10px] font-label-bold text-primary">HARDWARE</span>
+</div>
+</div>
+</div>
+<!-- Service 3: Desarrollo Web (Glassmorphism Card) -->
+<div class="md:col-span-6 group relative overflow-hidden rounded-[24px] border border-secondary-container/30 bg-gradient-to-br from-secondary-fixed to-surface-container-high p-1">
+<div class="bg-white/80 backdrop-blur-xl rounded-[22px] h-full p-10 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl" data-icon="code">code</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">DESARROLLO WEB Y SOFTWARE</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                                    Creamos ecosistemas digitales modernos. Sitios web de alto impacto y aplicaciones robustas en Java diseñadas para escalar.
+                                </p>
+<button class="bg-secondary text-white px-6 py-3 rounded-xl font-label-bold text-label-bold hover:shadow-lg transition-shadow">
+                                    SOLICITAR COTIZACIÓN
+                                </button>
+</div>
+<div class="w-full md:w-1/3 aspect-square rounded-2xl overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist developer workspace featuring a wide-screen monitor displaying complex Java code with syntax highlighting in vibrant cyan and orange. The desk is matte black, holding a mechanical keyboard and a high-end mouse. The overall style is modern and focused, utilizing a soft depth-of-field effect with a tech-heavy corporate feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkFr8a7vPlh6STxHJ_haalGcmnPPzRYV19KZytCj1AhPUlw8AybIAzR6ZikMb3rcXQaGbLpuehjaVfDMk--4cbS41An1jcWo6j1yXXfCMe6RDSvlJddAzwwtsqrkZTZ-2GMCWtVPaYzfeXY-wC9coR2HwM37rCzm-xd_kiHTsFe6Rg0crGR_QWD9LSpBP8LKlHW3y_6IyV7SjzuhqIGKVVMdKo-TpKWuzWVS3Um9OkQFG1pBKH9ejtm_eh1VxmejLoy77K4FDkCcw"/>
+</div>
+</div>
+</div>
+<!-- Service 4: Insumos (Clean High Contrast) -->
+<div class="md:col-span-6 group relative overflow-hidden rounded-[24px] bg-primary text-white p-10 md:p-12">
+<div class="absolute right-[-10%] top-[-10%] w-64 h-64 bg-accent-orange/10 rounded-full blur-3xl group-hover:bg-accent-orange/20 transition-colors"></div>
+<div class="relative z-10 h-full flex flex-col">
+<h2 class="font-headline-lg text-headline-lg mb-6 flex items-center">
+<span class="material-symbols-outlined mr-4 text-accent-orange" data-icon="inventory_2">inventory_2</span>
+                                INSUMOS Y SUMINISTROS
+                            </h2>
+<div class="grid grid-cols-2 gap-4 mt-auto">
+<div class="bg-white/10 p-6 rounded-2xl border border-white/10 hover:border-accent-orange/50 transition-colors">
+<h3 class="font-label-bold text-label-bold text-accent-orange mb-2">CONSUMIBLES</h3>
+<p class="text-[14px] text-white/70">Tintas, toners y repuestos originales para todas las marcas.</p>
+</div>
+<div class="bg-white/10 p-6 rounded-2xl border border-white/10 hover:border-accent-orange/50 transition-colors">
+<h3 class="font-label-bold text-label-bold text-accent-orange mb-2">HERRAMIENTAS</h3>
+<p class="text-[14px] text-white/70">Kits de limpieza y mantenimiento técnico especializado.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop mesh-gradient-bg">
+<div class="max-w-container-max mx-auto text-center slant-container bg-primary py-24 px-8 rounded-3xl relative overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-gradient-to-r from-secondary/20 to-transparent"></div>
+<div class="relative z-10">
+<h2 class="font-headline-xl text-headline-xl text-white mb-8">¿LISTO PARA EVOLUCIONAR?</h2>
+<p class="font-body-lg text-body-lg text-white/70 max-w-2xl mx-auto mb-12">
+                        Nuestro equipo de ingenieros está listo para transformar tu infraestructura tecnológica. No busques un proveedor, encuentra un aliado estratégico.
+                    </p>
+<div class="flex flex-col md:flex-row justify-center items-center gap-6">
+<button class="bg-white text-primary px-10 py-5 rounded-xl font-headline-md text-headline-md tracking-wide hover:bg-accent-yellow transition-colors w-full md:w-auto">
+                            HABLEMOS AHORA
+                        </button>
+<button class="border border-white/30 text-white px-10 py-5 rounded-xl font-headline-md text-headline-md tracking-wide hover:bg-white/10 transition-colors w-full md:w-auto">
+                            DESCARGAR BROCHURE
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-section-padding bg-primary text-on-primary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-2">
+<div class="font-headline-md text-headline-md text-on-primary mb-6"><img alt="Monkeys Company SAS Logo" class="h-16 w-auto mb-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5zC-tK9vSFY4nYOL8plQWA2haskqX6Pivd958I1xpLNlV1F9wm4AVSEWxZeCj9Az4ntincylOZHqwFlOVLN-pG48OaKRsSLbu9LlvhWbBTb6HU0UcU36qQl4eNMLuWxymj7uSEWV6t2DzJeg3ttHGAa8UhM6CudSJgo0ngdr1FTyUSA06EiyXd8fxcm5mR5-TmE_Qe7MmVREtFZ0NhSaihs-PAroGyRIw1RKKd_JHAVqP6V2CtxjSk6w6gdHkWdJnjuyoEb63AiY"/></div>
+<p class="font-body-md text-body-md text-on-primary/70 max-w-md mb-8">
+                    Líderes en integración tecnológica en el sur de Bolívar. Innovación, compromiso y excelencia en cada proyecto.
+                </p>
+<p class="font-label-bold text-label-bold text-on-primary/50" textcontent="© 2024 Monkeys Company SAS. Carrera 12 N 10-15, Santa Rosa del Sur. Teléfono: (57) 313 873 4449">
+                    © 2024 Monkeys Company SAS. Carrera 12 N 10-15, Santa Rosa del Sur. Phone: (57) 313 873 4449
+                </p>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm mb-6 text-accent-orange">NAVEGACIÓN</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary/70 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block font-label-bold text-label-bold" href="#">Inicio</a></li>
+<li><a class="text-accent-orange font-bold font-label-bold text-label-bold" href="#">Servicios</a></li>
+<li><a class="text-on-primary/70 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block font-label-bold text-label-bold" href="#">Nosotros</a></li>
+<li><a class="text-on-primary/70 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block font-label-bold text-label-bold" href="#">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm mb-6 text-accent-orange">REDES SOCIALES</h4>
+<div class="flex flex-wrap gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors focus:ring-2 focus:ring-secondary-container" href="#">
+<span class="material-symbols-outlined text-white" data-icon="facebook">facebook</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors focus:ring-2 focus:ring-secondary-container" href="#">
+<span class="material-symbols-outlined text-white" data-icon="camera">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors focus:ring-2 focus:ring-secondary-container" href="#">
+<span class="material-symbols-outlined text-white" data-icon="videocam">videocam</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

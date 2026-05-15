@@ -5,7 +5,188 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+/* ---------------------------------------------------------------------------
+ * Monkeys Company — Brand theme (Tailwind v4)
+ * Paleta, tipografía, espacios y radios derivados del design system de Stitch
+ * ------------------------------------------------------------------------- */
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    /* Tipografía base */
+    --font-headline: 'Bebas Neue', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+
+    /* Font-family aliases que usa el HTML del diseño (font-headline-xl, font-body-md, etc.) */
+    --font-headline-xl: 'Bebas Neue', system-ui, sans-serif;
+    --font-headline-xl-mobile: 'Bebas Neue', system-ui, sans-serif;
+    --font-headline-lg: 'Bebas Neue', system-ui, sans-serif;
+    --font-headline-md: 'Bebas Neue', system-ui, sans-serif;
+    --font-headline-sm: 'Bebas Neue', system-ui, sans-serif;
+    --font-body-lg: 'Inter', system-ui, sans-serif;
+    --font-body-md: 'Inter', system-ui, sans-serif;
+    --font-body-sm: 'Inter', system-ui, sans-serif;
+    --font-label-bold: 'Inter', system-ui, sans-serif;
+
+    /* Brand palette - exactos del manual */
+    --color-brand-dark: #00002A;        /* Azul muy oscuro - principal */
+    --color-brand-deep: #1E2A4C;        /* Azul oscuro */
+    --color-brand-mid: #5A9DBC;         /* Azul medio */
+    --color-brand-light: #71CAFF;       /* Azul claro */
+    --color-brand-muted: #9CB5C3;       /* Azul muy claro */
+    --color-brand-pale: #C8E7FA;        /* Azul pálido / fondo */
+    --color-brand-cyan: #00D3FF;        /* Cyan acento (CTA) */
+    --color-brand-yellow: #FFFF00;      /* Amarillo acento */
+    --color-brand-orange: #FF8C00;      /* Naranja acento */
+
+    /* Tokens semánticos derivados del design system */
+    --color-primary: #00002A;
+    --color-on-primary: #ffffff;
+    --color-secondary: #00658d;
+    --color-on-secondary: #ffffff;
+    --color-secondary-container: #72caff;
+    --color-on-secondary-container: #005577;
+    --color-surface: #faf8ff;
+    --color-surface-container: #eaedff;
+    --color-surface-container-low: #f2f3ff;
+    --color-surface-container-high: #e3e7ff;
+    --color-surface-container-lowest: #ffffff;
+    --color-on-surface: #0d1a3b;
+    --color-on-surface-variant: #46464e;
+    --color-outline: #77767f;
+    --color-outline-variant: #c7c5cf;
+    --color-background: #faf8ff;
+    --color-on-background: #0d1a3b;
+    --color-bg-pale: #C8E7FA;
+    --color-success: #70E000;
+    --color-error: #ba1a1a;
+    --color-accent-yellow: #FFFF00;
+    --color-accent-orange: #FF8C00;
+
+    /* Tipografías nominales (text-headline-xl, etc.) */
+    --text-headline-xl: 80px;
+    --text-headline-xl--line-height: 80px;
+    --text-headline-xl--letter-spacing: 0.02em;
+    --text-headline-xl--font-weight: 700;
+
+    --text-headline-xl-mobile: 48px;
+    --text-headline-xl-mobile--line-height: 48px;
+    --text-headline-xl-mobile--font-weight: 700;
+
+    --text-headline-lg: 48px;
+    --text-headline-lg--line-height: 48px;
+    --text-headline-lg--letter-spacing: 0.02em;
+    --text-headline-lg--font-weight: 700;
+
+    --text-headline-md: 32px;
+    --text-headline-md--line-height: 36px;
+    --text-headline-md--font-weight: 700;
+
+    --text-headline-sm: 24px;
+    --text-headline-sm--line-height: 28px;
+    --text-headline-sm--font-weight: 700;
+
+    --text-body-lg: 18px;
+    --text-body-lg--line-height: 28px;
+
+    --text-body-md: 16px;
+    --text-body-md--line-height: 24px;
+
+    --text-body-sm: 14px;
+    --text-body-sm--line-height: 20px;
+
+    --text-label-bold: 12px;
+    --text-label-bold--line-height: 16px;
+    --text-label-bold--letter-spacing: 0.05em;
+    --text-label-bold--font-weight: 600;
+
+    /* Spacing & sizing tokens del design system */
+    --spacing-margin-mobile: 20px;
+    --spacing-margin-desktop: 64px;
+    --spacing-gutter: 24px;
+    --spacing-section-padding: 120px;
+
+    --container-max: 1280px;
+
+    /* Radius del sistema */
+    --radius-DEFAULT: 0.5rem;
+    --radius-sm: 0.25rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+}
+
+/* ---------------------------------------------------------------------------
+ * Utilidades custom replicadas del diseño Stitch
+ * ------------------------------------------------------------------------- */
+@layer utilities {
+    /* Hero con mesh gradient sobre azul oscuro */
+    .mesh-gradient-hero {
+        background-color: #00002A;
+        background-image:
+            radial-gradient(at 0% 0%, #00D3FF 0, transparent 50%),
+            radial-gradient(at 100% 100%, #00002A 0, transparent 50%),
+            radial-gradient(at 100% 0%, #00D3FF 0, transparent 40%);
+    }
+
+    /* Mesh suave para secciones intermedias */
+    .mesh-gradient-soft,
+    .mesh-gradient,
+    .mesh-gradient-bg {
+        background-color: #faf8ff;
+        background-image:
+            radial-gradient(at 0% 0%, rgba(0, 211, 255, 0.18) 0, transparent 55%),
+            radial-gradient(at 100% 100%, rgba(113, 202, 255, 0.22) 0, transparent 50%),
+            radial-gradient(at 50% 0%, rgba(200, 231, 250, 0.5) 0, transparent 60%);
+    }
+
+    /* Transición diagonal "Stripe-like" */
+    .stripe-slant {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    }
+    .stripe-slant-reverse {
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /* Card vidrio sobre gradientes */
+    .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid #C8E7FA;
+    }
+
+    /* Sombra ambiental difusa */
+    .ambient-shadow {
+        box-shadow:
+            0 15px 35px rgba(0, 0, 42, 0.05),
+            0 5px 15px rgba(0, 0, 0, 0.03);
+    }
+
+    /* Hover lift para cards */
+    .card-lift {
+        transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+    .card-lift:hover {
+        transform: translateY(-4px);
+        box-shadow:
+            0 25px 50px rgba(0, 0, 42, 0.08),
+            0 10px 25px rgba(0, 0, 0, 0.04);
+    }
+}
+
+/* Suavizado tipográfico global */
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-on-surface);
+    background-color: var(--color-background);
+}
+
+/* Material Symbols se renderizan ligeros como en el diseño */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
 }

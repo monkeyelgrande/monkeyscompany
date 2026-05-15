@@ -9,9 +9,9 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
             fonts: [
-                bunny('Instrument Sans', {
-                    weights: [400, 500, 600],
-                }),
+                // Tipografía de marca (Bebas Neue para titulares, Inter para cuerpo)
+                bunny('Bebas Neue', { weights: [400] }),
+                bunny('Inter', { weights: [400, 500, 600, 700] }),
             ],
         }),
         tailwindcss(),

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "accent-orange": "#FF8C00",
+                    "outline": "#77767f",
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#46464e",
+                    "on-secondary-fixed": "#001e2d",
+                    "on-tertiary-container": "#0090af",
+                    "tertiary-fixed": "#b5ebff",
+                    "surface-container-low": "#f2f3ff",
+                    "on-tertiary-fixed-variant": "#004e5f",
+                    "on-surface": "#0d1a3b",
+                    "surface-container-highest": "#dbe1ff",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#14173f",
+                    "success-green": "#70E000",
+                    "surface-dim": "#cfd9ff",
+                    "secondary-fixed-dim": "#82cfff",
+                    "secondary": "#00658d",
+                    "on-error-container": "#93000a",
+                    "surface": "#faf8ff",
+                    "inverse-surface": "#232f51",
+                    "surface-container-high": "#e3e7ff",
+                    "primary": "#000000",
+                    "on-background": "#0d1a3b",
+                    "stripe-indigo": "#635BFF",
+                    "tertiary-fixed-dim": "#42d6ff",
+                    "surface-container": "#eaedff",
+                    "bg-pale": "#C8E7FA",
+                    "primary-container": "#14173f",
+                    "on-primary-container": "#7e80ae",
+                    "on-secondary-container": "#005577",
+                    "tertiary-container": "#001f28",
+                    "secondary-container": "#72caff",
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "background": "#faf8ff",
+                    "tertiary": "#000000",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#c1c3f5",
+                    "surface-tint": "#585b86",
+                    "secondary-fixed": "#c6e7ff",
+                    "on-primary-fixed-variant": "#40436d",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c7c5cf",
+                    "accent-yellow": "#FFFF00",
+                    "surface-variant": "#dbe1ff",
+                    "inverse-primary": "#c1c3f5",
+                    "inverse-on-surface": "#eef0ff",
+                    "surface-bright": "#faf8ff",
+                    "primary-fixed": "#e0e0ff",
+                    "on-tertiary-fixed": "#001f28"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "section-padding": "120px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Bebas Neue"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-xl": ["Bebas Neue"],
+                    "headline-md": ["Bebas Neue"],
+                    "headline-xl-mobile": ["Bebas Neue"],
+                    "label-bold": ["Inter"],
+                    "headline-sm": ["Bebas Neue"],
+                    "body-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", {"lineHeight": "48px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-xl": ["80px", {"lineHeight": "80px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-xl-mobile": ["48px", {"lineHeight": "48px", "fontWeight": "700"}],
+                    "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .mesh-gradient {
+            background-color: #faf8ff;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(200, 231, 250, 0.4) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(114, 202, 255, 0.2) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(200, 231, 250, 0.3) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(99, 91, 255, 0.1) 0px, transparent 50%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid #C8E7FA;
+        }
+        .ambient-shadow {
+            box-shadow: 0 15px 35px rgba(0, 0, 42, 0.05), 0 5px 15px rgba(0, 0, 0, 0.03);
+        }
+        .slant-bg {
+            transform: skewY(-3deg);
+        }
+        .slant-content {
+            transform: skewY(3deg);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-xl border-b border-outline-variant/20 dark:border-outline/20 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<span class="font-headline-md text-headline-md tracking-tight text-primary dark:text-primary-fixed"><img alt="Monkeys Company SAS" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5zC-tK9vSFY4nYOL8plQWA2haskqX6Pivd958I1xpLNlV1F9wm4AVSEWxZeCj9Az4ntincylOZHqwFlOVLN-pG48OaKRsSLbu9LlvhWbBTb6HU0UcU36qQl4eNMLuWxymj7uSEWV6t2DzJeg3ttHGAa8UhM6CudSJgo0ngdr1FTyUSA06EiyXd8fxcm5mR5-TmE_Qe7MmVREtFZ0NhSaihs-PAroGyRIw1RKKd_JHAVqP6V2CtxjSk6w6gdHkWdJnjuyoEb63AiY"/></span>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Inicio</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Servicios</a>
+<a class="font-label-bold text-label-bold text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary dark:border-secondary-fixed-dim pb-1" href="#">Nosotros</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Contacto</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-bold text-label-bold hover:opacity-80 transition-all active:scale-95">¿Listo para empezar?</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-section-padding pb-section-padding mesh-gradient">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div>
+<span class="inline-block font-label-bold text-label-bold text-secondary tracking-widest bg-secondary-container/30 px-4 py-2 rounded-full mb-6">DESDE 2009</span>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary mb-8 max-w-2xl">TECNOLOGÍA EN EVOLUCIÓN EN SANTA ROSA DEL SUR</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">Por más de 15 años, hemos sido el corazón digital de Bolívar, transformando desafíos complejos en soluciones elegantes para empresas y fintech.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-bold text-label-bold ambient-shadow hover:-translate-y-1 transition-transform">Explora Nuestro Viaje</button>
+<button class="border border-secondary text-secondary px-8 py-4 rounded-xl font-label-bold text-label-bold hover:bg-secondary/5 transition-colors">Conoce al Equipo</button>
+</div>
+</div>
+<div class="relative mt-12 lg:mt-0">
+<div class="absolute -inset-4 bg-gradient-to-tr from-secondary-container to-transparent rounded-3xl opacity-20 blur-2xl"></div>
+<img class="rounded-3xl shadow-2xl relative z-10 border border-outline-variant/30 w-full object-cover aspect-[4/3]" data-alt="A sophisticated modern office interior for a high-tech software company in Santa Rosa del Sur. The space features floor-to-ceiling windows with soft morning light illuminating sleek black workstations and glass partitions. Vibrant mesh gradients of cyan and pale blue are reflected in the minimalist architecture. The mood is professional, calm, and technologically advanced, capturing a high-end enterprise fintech atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCok2hmsnTyl6WoTOr1KaaISokokxn9OcPtjzV7sn2ELc1360M-tiP5_SeezUfQJE8_Ej_zOFzdUpDGQwUsI-NNSVIdFZ40-MBXvTI6xWhHtdMSY5vxUh_fjSx0ccf0DvXNbYgC3yjAwAJt3XS0NS1HREfYF-_Wv5AsltFxPwz5VKVC_nLJaZ_m8dqha_N_EdPdnmbxXsHZVWWtFFR4ZoNu9-Z1vJhDTJKKohh2NTQ4hFaHMwepXJMsXt1hpZBZaVSjCRpyczSuhOU"/>
+</div>
+</div>
+</div>
+</section>
+<!-- History Timeline -->
+<section class="py-section-padding bg-surface">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-6">
+<h2 class="font-headline-lg text-headline-lg text-primary max-w-lg">NUESTRO CAMINO EVOLUTIVO</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Crónica de una visión que comenzó en Bolívar y escaló para servir a la frontera digital.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+<!-- Timeline Line -->
+<div class="hidden md:block absolute top-12 left-0 right-0 h-px bg-outline-variant/30 z-0"></div>
+<div class="relative z-10">
+<div class="w-24 h-24 rounded-full bg-primary-container flex items-center justify-center mb-8 ambient-shadow">
+<span class="font-headline-sm text-headline-sm text-on-primary-container">2009</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">LA FUNDACIÓN</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Establecida en Santa Rosa del Sur, Bolívar, como pionera tecnológica local enfocada en conectar los negocios rurales con el mundo digital.</p>
+</div>
+<div class="relative z-10">
+<div class="w-24 h-24 rounded-full bg-secondary flex items-center justify-center mb-8 ambient-shadow">
+<span class="font-headline-sm text-headline-sm text-white">2017</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">PIVOTE FINTECH</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Escalando nuestra experiencia hacia tecnologías financieras complejas, desarrollando infraestructuras de alta seguridad para socios regionales.</p>
+</div>
+<div class="relative z-10">
+<div class="w-24 h-24 rounded-full bg-accent-orange flex items-center justify-center mb-8 ambient-shadow">
+<span class="font-headline-sm text-headline-sm text-white">2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">ALCANCE GLOBAL</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Hoy, Monkeys Company SAS se erige como un faro de excelencia profesional, entregando soluciones de vanguardia a través de las fronteras.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision (Slanted Section) -->
+<section class="relative py-section-padding overflow-hidden">
+<div class="absolute inset-0 bg-primary slant-bg z-0"></div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10 slant-content">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-section-padding text-on-primary">
+<div class="glass-card p-12 rounded-3xl border-on-primary/10 bg-on-primary/5">
+<span class="material-symbols-outlined text-secondary-container text-5xl mb-6">rocket_launch</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">MISIÓN</h2>
+<p class="font-body-lg text-body-lg text-on-primary/80">Empoderar a las organizaciones a través de soluciones tecnológicas inteligentemente audaces que cierren la brecha entre los requisitos digitales complejos y las experiencias centradas en el ser humano, fomentando el crecimiento en nuestra comunidad local y más allá.</p>
+</div>
+<div class="glass-card p-12 rounded-3xl border-on-primary/10 bg-on-primary/5">
+<span class="material-symbols-outlined text-accent-orange text-5xl mb-6">visibility</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">MISIÓN</h2>
+<p class="font-body-lg text-body-lg text-on-primary/80">Empoderar a las organizaciones a través de soluciones tecnológicas inteligentemente audaces que cierren la brecha entre los requisitos digitales complejos y las experiencias centradas en el ser humano, fomentando el crecimiento en nuestra comunidad local y más allá.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Values (Bento Grid) -->
+<section class="py-section-padding bg-background">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-24 uppercase tracking-tight">NUESTROS VALORES FUNDAMENTALES</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Value 1: Innovation -->
+<div class="md:col-span-8 glass-card p-10 rounded-3xl ambient-shadow flex flex-col md:flex-row gap-10 items-center overflow-hidden group">
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">INNOVACIÓN</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">No solo seguimos las tendencias, las definimos. Nuestro equipo explora las fronteras de la IA, el fintech y la arquitectura para construir herramientas duraderas.</p>
+</div>
+<div class="w-full md:w-1/2 aspect-video rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-tech digital interface representing innovation with flowing data particles and circuitry patterns in deep blues and cyan. The lighting is focused and dramatic, evoking a sense of future technology and creative discovery in a professional software development context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbMMD0kSvT282y6IcJjxk-W5oJzTG83qQKLRJk4SmfNtOIr-arW-wmbWpwPEF5KmbbdhKrM2pzQykC9yN7Hu-WizFR1QNFyl-qHkRtOD1Am9r0ECu5L91-4OAs_N_HMuAOZRj7I_5x4CTH2PYG7k-jQuqybEYeCMsYEhyvPGOL4t3xSC1hYzY4Ho_zI_unVBqnbircIhucq6pIb0OUzZFKYPPO9EQuK0glyxQynPLw8l6KIGpClSzJvVk_xiH4ufLEXDXVP0mH5Q0"/>
+</div>
+</div>
+<!-- Value 2: Responsibility -->
+<div class="md:col-span-4 bg-primary-container p-10 rounded-3xl flex flex-col justify-end text-on-primary overflow-hidden relative group">
+<div class="absolute top-0 right-0 p-8 opacity-20">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-4">RESPONSABILIDAD</h3>
+<p class="font-body-md text-body-md text-on-primary-container">La integridad es la base de nuestro código. Asumimos la plena propiedad de los sistemas que impulsan el futuro de nuestros clientes.</p>
+</div>
+</div>
+<!-- Value 3: Professionalism -->
+<div class="md:col-span-12 glass-card p-10 rounded-3xl ambient-shadow grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+<img class="rounded-2xl w-full h-[300px] object-cover" data-alt="A diverse team of professionals in a high-tech meeting room collaborating on a digital strategy. The environment is clean and modern with glass whiteboards and advanced technical equipment. The lighting is bright and airy, reflecting a light-mode enterprise aesthetic with subtle accents of secondary blue and cyan." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBheYTUn8JxdbG0YfPIg6TNF3QgXJxlmhPNthH5Tr3xIY8wjQJHYz5ttRlMg_q34mIgpNHG2C2KR6zwq07jE6VDDY2BYZe4wXHtadtpiJl_xAWt4p9VjARCGZC2URUUPQ211DzMF-5_9E31CBro-TrIMxzcsMrbc1C906PZHIffgZQojTWulRf5pT5VkKH4CKDHXlin4YWZF3P0bHF7TcOyoU_euSMNn97ULDLsaUqtkU1anCv9FKJvQN9L8XGkrW84R8N6JdMvxQI"/>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">PROFESIONALISMO</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Cada línea de código y cada interacción con el cliente se maneja con la precisión esperada de los estándares globales. Representamos lo mejor de Bolívar ante el mundo.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 font-label-bold text-label-bold text-secondary"><span class="material-symbols-outlined text-sm">check_circle</span>ESTÁNDARES CUMPLIMIENTO ISO</li>
+<li class="flex items-center gap-3 font-label-bold text-label-bold text-secondary"><span class="material-symbols-outlined text-sm">check_circle</span>SOPORTE EMPRESARIAL 24/7</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Quote / Commitment -->
+<section class="py-section-padding mesh-gradient border-y border-outline-variant/20">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="mb-12 flex justify-center">
+<div class="w-24 h-1 bg-primary"></div>
+</div>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary mb-12">"NO ESTAMOS SOLO CONSTRUYENDO SOFTWARE. ESTAMOS CONSTRUYENDO LA INFRAESTRUCTURA PARA EL FUTURO DE NUESTRA REGIÓN."</h2>
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 rounded-full border-2 border-secondary p-1 mb-4">
+<img class="w-full h-full object-cover rounded-full" data-alt="Professional headshot of a visionary tech leader, middle-aged male, looking confident with a slight smile. The background is a clean, blurred office with soft blue lighting. High-end professional portrait photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJsI2z5PeOhdz51bNMfrdNTjOcAEDeBMEi5y3USuQ5UJkANoHFf34WKhrnRd6tW7igu5ljuj8W2ASFzCpiI6urol2Zlx-XLS73b5yAjNWaT9kRkHZ_mclJDXA7dwdoJ9skelJFLcQciRnZ65VcC1V_PVQWB3vNYjYFAOnE5aD1HdcQA7Y_PjO4O5EbR3Kz8zQSJ3kLUHS2kiw7MtlkrR-pf5iLLrJl7c8eHqs8B3Zh_U2s49eAjYtkDlxVVUgFtpaClDQ10HGUdSQ"/>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary">Junta Directiva</span>
+<span class="font-label-bold text-label-bold text-secondary">MONKEYS COMPANY SAS</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-surface-container-lowest w-full py-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<span class="font-headline-md text-headline-md text-on-primary dark:text-primary block mb-6">Monkeys Company SAS</span>
+<p class="font-body-sm text-body-sm text-on-primary/70 dark:text-on-surface-variant/70 mb-8">
+                    Leading the digital transformation of South Bolivar since 2009.
+                </p>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-bold text-label-bold text-on-primary mb-6 uppercase">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary dark:hover:text-on-surface transition-transform hover:translate-x-1 inline-block" href="#">Inicio</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary dark:hover:text-on-surface transition-transform hover:translate-x-1 inline-block" href="#">Servicios</a></li>
+<li><a class="font-body-md text-body-md text-accent-orange font-bold transition-transform hover:translate-x-1 inline-block" href="#">Nosotros</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary dark:hover:text-on-surface transition-transform hover:translate-x-1 inline-block" href="#">Contacto</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-bold text-label-bold text-on-primary mb-6 uppercase">Social</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary dark:hover:text-on-surface transition-transform hover:translate-x-1 inline-block" href="#">Facebook</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary dark:hover:text-on-surface transition-transform hover:translate-x-1 inline-block" href="#">Instagram</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary dark:hover:text-on-surface transition-transform hover:translate-x-1 inline-block" href="#">YouTube</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/70 dark:text-on-surface-variant/70 hover:text-on-primary dark:hover:text-on-surface transition-transform hover:translate-x-1 inline-block" href="#">X</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-bold text-label-bold text-on-primary mb-6 uppercase">Contact</h4>
+<p class="font-body-sm text-body-sm text-on-primary/70 dark:text-on-surface-variant/70">
+                    Carrera 12 N 10-15, Santa Rosa del Sur.<br/>
+                    Phone: (57) 313 873 4449
+                </p>
+<div class="mt-8 flex gap-4">
+<button class="bg-on-primary text-primary w-10 h-10 rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-sm">mail</span>
+</button>
+<button class="bg-on-primary text-primary w-10 h-10 rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-sm">phone</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-section-padding pt-8 border-t border-on-primary/10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<p class="font-label-bold text-label-bold text-on-primary/50 text-center">© 2024 Monkeys Company SAS. Carrera 12 N 10-15, Santa Rosa del Sur. Teléfono: (57) 313 873 4449</p>
+</div>
+</footer>
+</body></html>
